@@ -16,8 +16,14 @@ const getFilterByCategory = async (category) => {
   return response.data;
 };
 
+const getRandomMeal = async () => {
+  const response = await axios.get(`${API_URL}random.php`);
+  return response.data;
+}
+
 export { 
   getMealById,
   getCategories,
-  getFilterByCategory
+  getFilterByCategory,
+  getRandomMeal,
 };

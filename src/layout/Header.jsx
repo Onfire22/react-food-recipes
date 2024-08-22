@@ -10,7 +10,7 @@ const Header = () => {
       <Navbar.Brand href="/#">React Food App</Navbar.Brand>
       <Nav>
         <NavLink className="nav_link" to="/">Recipes</NavLink>
-        <NavLink className="nav_link">Random Meal</NavLink>
+        <NavLink className="nav_link" to="/random_meal">Get Your Random Meal Recipe</NavLink>
         <NavLink className="nav_link" to="https://github.com/Onfire22/react-food-recipes" target='_blank'>Github Repo</NavLink>
       </Nav>
     </Container>
