@@ -3,7 +3,7 @@ import { getCategories } from "../../api";
 import Categories from "./Categories";
 import { Spinner } from "react-bootstrap";
 
-const Home = () => {
+const CategoryPage = () => {
   const [catalog, setCategories] = useState([]);
 
   useEffect(() => {
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home
+export default CategoryPage;

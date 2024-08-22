@@ -1,15 +1,18 @@
-import Footer from "./layout/Footer";
-import Header from "./layout/Header";
+import { Route, Routes } from "react-router-dom";
 import Main from "./layout/Main";
-import { BrowserRouter } from "react-router-dom";
+import CategoryPage from "./components/Categories/CategoryPage";
+import MealPage from "./components/MealsList/MealPage";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-        <Main />
-      <Footer />
-    </BrowserRouter>
+    <>
+      <Routes>
+        <Route path="/" element={<Main />}>
+          <Route index element={<CategoryPage />} />
+          <Route path="/category/:name" element={<MealPage />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

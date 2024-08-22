@@ -1,7 +1,7 @@
 import Card from 'react-bootstrap/Card';
 import { Link } from 'react-router-dom';
 
-const Category = ({ strCategory, strCategoryThumb, strCategoryDescription, idCategory }) => {
+const Category = ({ strCategory, strCategoryThumb, strCategoryDescription }) => {
   return (
     <li className='list__item'>
       <Card>
@@ -11,7 +11,7 @@ const Category = ({ strCategory, strCategoryThumb, strCategoryDescription, idCat
           <Card.Text>
             {strCategoryDescription.slice(0, 70)}...
           </Card.Text>
-          <Link to={`/category/${idCategory}`}>Watch category</Link>
+          <Link to={`/category/${strCategory}`}>Watch category</Link>
         </Card.Body>
       </Card>
     </li>
