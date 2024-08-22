@@ -8,6 +8,7 @@ import Search from "../Search";
 const CategoryPage = () => {
   const [catalog, setCategories] = useState([]);
   const [filteredCatalog, setFilteredCatalog] = useState([]);
+  // eslint-disable-next-line
   const { pathname, search } = useLocation();
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -17,13 +18,13 @@ const CategoryPage = () => {
         setCategories(data.categories);
         setFilteredCatalog(search ? data.categories.filter(item => item.strCategory
           .toLowerCase()
-          .includes(search.split('=')[1].toLowerCase())
+          .includes(searchParams.get('search'))
         )
         :
         data.categories
       );
       });
-  }, [search]);
+  }, [searchParams, search]);
 
   const filterCatalog = (text) => {
     const newCatalog = catalog.filter(item => item.strCategory

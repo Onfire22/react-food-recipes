@@ -14,10 +14,11 @@ const Search = ({ filter }) => {
 
   return (
     <>
-      <Form.Control 
+      <Form.Control
+        data-bs-theme="dark"
         size="lg"
         type="text"
-        placeholder="Search"
+        placeholder="Category Search"
         value={text}
         onChange={({ target }) => setText(target.value)}
         onKeyDown={handleKey}

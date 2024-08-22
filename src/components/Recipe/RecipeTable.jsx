@@ -21,7 +21,7 @@ const RecipeTable = ({ recipe = {} }) => {
   return (
     <>
      {Object.entries(recipe).length > 0 && 
-      <Container>
+      <Container className='recipe_container'>
         {
           Object.entries(getRecipe(recipe))
           .map(([key, value]) => {
