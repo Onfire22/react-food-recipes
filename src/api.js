@@ -7,8 +7,8 @@ const getMealById = async (id) => {
 };
 
 const getCategories = async () => {
- const response = await axios.get(`${API_URL}categories.php`);
- return response.data;
+  const response = await axios.get(`${API_URL}categories.php`);
+  return response.data;
 };
 
 const getFilterByCategory = async (category) => {
