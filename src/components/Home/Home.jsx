@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { getCategories } from "../api";
-import Categories from "../components/Categories";
+import { getCategories } from "../../api";
+import Categories from "./Categories";
 import { Spinner } from "react-bootstrap";
 
 const Home = () => {
